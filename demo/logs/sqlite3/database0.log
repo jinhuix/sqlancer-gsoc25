@@ -1,0 +1,108 @@
+--java.lang.AssertionError: INSERT INTO vt0(vt0) VALUES('integrity-check');
+--	at sqlancer.common.query.SQLQueryAdapter.checkException(SQLQueryAdapter.java:166)
+--	at sqlancer.common.query.SQLQueryAdapter.internalExecute(SQLQueryAdapter.java:147)
+--	at sqlancer.common.query.SQLQueryAdapter.execute(SQLQueryAdapter.java:122)
+--	at sqlancer.common.query.SQLQueryAdapter.execute(SQLQueryAdapter.java:102)
+--	at sqlancer.Main$QueryManager.execute(Main.java:368)
+--	at sqlancer.GlobalState.executeStatement(GlobalState.java:108)
+--	at sqlancer.StatementExecutor.executeStatements(StatementExecutor.java:70)
+--	at sqlancer.sqlite3.SQLite3Provider.generateDatabase(SQLite3Provider.java:214)
+--	at sqlancer.sqlite3.SQLite3Provider.generateDatabase(SQLite3Provider.java:1)
+--	at sqlancer.ProviderAdapter.generateAndTestDatabase(ProviderAdapter.java:52)
+--	at sqlancer.Main$DBMSExecutor.run(Main.java:467)
+--	at sqlancer.Main$2.run(Main.java:684)
+--	at sqlancer.Main$2.runThread(Main.java:666)
+--	at sqlancer.Main$2.run(Main.java:657)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+--	at java.base/java.lang.Thread.run(Thread.java:829)
+--Caused by: org.sqlite.SQLiteException: [SQLITE_CORRUPT]  The database disk image is malformed (database disk image is malformed)
+--	at org.sqlite.core.DB.newSQLException(DB.java:941)
+--	at org.sqlite.core.DB.newSQLException(DB.java:953)
+--	at org.sqlite.core.DB.execute(DB.java:857)
+--	at org.sqlite.core.CoreStatement.exec(CoreStatement.java:80)
+--	at org.sqlite.jdbc3.JDBC3Statement.execute(JDBC3Statement.java:53)
+--	at sqlancer.common.query.SQLQueryAdapter.internalExecute(SQLQueryAdapter.java:140)
+--	... 15 more
+---- Time: 2025/08/28 14:45:25
+-- Database: database0
+-- Database version: 3.28.0
+-- seed value: 1697613568309
+PRAGMA cache_size = 50000;
+PRAGMA temp_store=MEMORY;
+PRAGMA synchronous=off;
+PRAGMA encoding = 'UTF-16be';
+CREATE VIRTUAL TABLE vt0 USING fts4(c0 UNINDEXED, prefix=426, order=DESC);
+CREATE TABLE t1 (c0 REAL , c1 INTEGER UNIQUE ON CONFLICT ROLLBACK NOT NULL CHECK ( CAST(CASE WHEN c2 THEN c1 ELSE c2 END AS TEXT)) , c2 TEXT );
+INSERT OR ABORT INTO t1 VALUES ('T[qw', -1399325347, NULL), (0.08234464821098164, x'', 0.5051934906595581), (0.20911285923649114, 'F㏽PsV', NULL);
+INSERT OR IGNORE INTO t1(c2) VALUES (0.29185622418114365);
+INSERT OR IGNORE INTO t1(c1, c2) VALUES (0.053727314532117876, 0X4311a985), (0xffffffffe06bca02, 534199791), (NULL, 0x0);
+INSERT OR REPLACE INTO t1(c0, c1) VALUES (0.24051690203533227, x'');
+ROLLBACK TRANSACTION;
+PRAGMA auto_vacuum = FULL;
+BEGIN IMMEDIATE TRANSACTION;
+ANALYZE;
+UPDATE OR FAIL t1 SET (c2)=(NULL);
+INSERT OR ABORT INTO t1(c1) VALUES (0.24051690203533227);
+INSERT INTO vt0(vt0, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt0(vt0) VALUES('optimize');
+INSERT OR IGNORE INTO vt0(c0) VALUES (0.7581753911019898), (0x7c8cbe06), ('-707350067');
+ROLLBACK TRANSACTION;
+PRAGMA mmap_size;
+ANALYZE;
+ROLLBACK TRANSACTION;
+INSERT INTO vt0(vt0, rank) VALUES('merge', -1399325347);\n;
+INSERT INTO vt0(vt0, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt0(vt0) VALUES('optimize');
+INSERT INTO vt0(vt0, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt0(vt0) VALUES('optimize');
+INSERT OR FAIL INTO vt0 VALUES ('-1768933061');
+INSERT OR ABORT INTO vt0(c0) VALUES (NULL);
+PRAGMA temp.short_column_names;
+INSERT OR IGNORE INTO t1(c0) VALUES (0.5826273591290333), (0.3379584288162264), (0.36397887531820183);
+INSERT OR FAIL INTO vt0 VALUES (NULL);
+INSERT OR IGNORE INTO t1(c0) VALUES ('-380992957');
+COMMIT TRANSACTION;
+DELETE FROM sqlite_stat1 WHERE (((((NULL)AND(x'')))OR('')) IN ());
+ROLLBACK TRANSACTION;
+INSERT OR IGNORE INTO sqlite_stat1 VALUES('vt0', 'sqlite_autoindex_vt0_segdir_1', '2 -707350067');
+PRAGMA temp.automatic_index;
+INSERT OR REPLACE INTO vt0(c0) VALUES (NULL), ('0.5826273591290333'), (x'd8a768d1'), (-1343923232), ('');
+REINDEX  vt0;
+INSERT OR IGNORE INTO vt0(c0) VALUES (x'');
+INSERT INTO vt0(vt0, rank) VALUES('usermerge', 11);
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '42131');
+INSERT INTO vt0(vt0, rank) VALUES('usermerge', 6);
+INSERT INTO vt0(vt0) VALUES('rebuild');
+INSERT OR ROLLBACK INTO t1 VALUES (NULL, 0X155078ce, x''), ('-380992957', 'BE!X7', x''), (NULL, 'uu', x'3dc4');
+INSERT OR REPLACE INTO vt0(c0) VALUES ('');
+PRAGMA main.ignore_check_constraints;
+INSERT INTO vt0(vt0, rank) VALUES('usermerge', 3);
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '368');
+INSERT INTO vt0(vt0) VALUES('rebuild');
+UPDATE OR IGNORE vt0 SET (c0)=(0.3379584288162264);
+CREATE UNIQUE INDEX IF NOT EXISTS i39 ON t1(c1,CASE CAST(c1 AS NUMERIC)  WHEN (NOT (c0)) THEN ((c1) NOTNULL) ELSE c0 COLLATE NOCASE END COLLATE BINARY DESC,x'' ASC) WHERE (+ (c1)) COLLATE BINARY;
+INSERT INTO vt0(vt0, rank) VALUES('automerge', 10);
+INSERT INTO vt0(vt0, rank) VALUES('automerge', 11);
+INSERT INTO vt0(vt0, rank) VALUES('automerge', 12);
+INSERT INTO vt0(vt0) VALUES('merge=229234534,8');\n;
+INSERT OR IGNORE INTO vt0 VALUES (0x39e4e2a0);
+END;
+INSERT OR ABORT INTO t1 VALUES (-1.768933061E9, NULL, '796285533');
+INSERT OR ROLLBACK INTO t1(c0) VALUES (0.5976203116593123);
+INSERT OR FAIL INTO t1(c1, c2) VALUES (x'b006', -1399325347);
+INSERT OR ABORT INTO t1(c1) VALUES ('-2049478536');
+CREATE UNIQUE INDEX IF NOT EXISTS i85 ON t1((((((c1, c0, c0))>((c2, c0, ''))))==(((c1) IS TRUE))) COLLATE RTRIM,(((((NULL, NULL, NULL)) BETWEEN ((c2, c2, c1)) AND ((c2, '婝dAAd!!', c0))))*((((c2))==((c0))))),(~ ((((c1)) NOT BETWEEN (('5>o')) AND ((c2))))) ASC);
+INSERT OR ABORT INTO t1(c1, c2) VALUES (x'9361a33b', 1837261770);
+INSERT OR IGNORE INTO vt0(c0) VALUES ('cb');
+ANALYZE;
+REINDEX BINARY;
+INSERT OR FAIL INTO t1(c2, c1) VALUES (NULL, '51503981'), (0.4203327915249335, NULL), (0.9817910302327633, '-707350067');
+INSERT OR ROLLBACK INTO vt0 VALUES (x'');
+PRAGMA main.legacy_file_format;
+PRAGMA incremental_vacuum(-697569440);
+INSERT OR FAIL INTO t1(c0, c2) VALUES ('393054819', '1597193447'), (0.9072580651021418, 5.1503981E7), ('1125230981', '-1e500');
+INSERT OR ABORT INTO vt0 VALUES (0.5674108139086818);
+BEGIN DEFERRED TRANSACTION;
+CREATE INDEX IF NOT EXISTS i51 ON t1((((((+ (c2)))AND(((c0) IS FALSE))))OR(CAST(c2 AS NUMERIC))),CAST(c0 COLLATE BINARY AS INTEGER) COLLATE BINARY,((x'') NOTNULL) DESC) WHERE CAST(((c2) ISNULL) AS BLOB);
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '49276');
